@@ -3,6 +3,7 @@ import debug from 'debug';
 import MessageModel from '../models/message';
 import { Message, OnlineUsers } from '../types';
 import { IncomingMessage } from 'http';
+import 'dotenv/config';
 
 const PORT = process.env.PORT || 4000;
 const SecureWebSocket = new WebSocket.Server({ port: PORT as number });
