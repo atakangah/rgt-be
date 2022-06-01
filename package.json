@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "start": "npm run build && node dist/app.js",
-    "build": "npm run lint && rimraf dist/ && tsc",
+    "build": "rimraf dist/ && tsc",
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "eslint --resolve-plugins-relative-to ./ src/**/*.ts",
     "dev": "npm run build && node dist/app.js"
