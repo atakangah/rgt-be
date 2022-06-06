@@ -1,7 +1,6 @@
 import Mongoose from 'mongoose';
+import 'dotenv/config';
 
-export default Mongoose.connect(
-  'mongodb+srv://admin:admin.mongodb.01@cluster0.txrjeej.mongodb.net/?retryWrites=true&w=majority',
-)
+export default Mongoose.connect(`${process.env.MONGODB_URL}`)
   .then(() => console.log('Atlas db connect success'))
   .catch((error) => console.error(error));
